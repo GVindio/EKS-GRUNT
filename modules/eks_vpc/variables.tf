@@ -14,7 +14,7 @@ variable "vpc_cidr_block" {
 variable "environment" {
   description = "Environment name for deployment"
   type        = string
-  default     = "Development"
+  
 }
 
 variable "public_subnets" {
