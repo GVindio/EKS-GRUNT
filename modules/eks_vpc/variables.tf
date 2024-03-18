@@ -44,3 +44,18 @@ variable "private_az" {
   default     = ["us-east-1a", "us-east-1b"]
 }
 
+variable "pub_sub_tags" {
+  description = "Provide tags that needs to be as part of EKS network to manage ELB internet-facing"
+  type        = map(any)
+  default = {
+    "kubernetes.io/role/elb" = "1"
+  }
+}
+
+variable "priv_sub_tags" {
+  description = "Provide tags that needs to be as part of EKS network to manage ELB internal-elb"
+  type        = map(any)
+  default = {
+    "kubernetes.io/role/internal-elb" = "1"
+  }
+}
