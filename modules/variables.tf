@@ -40,10 +40,10 @@ variable "environment" {
 
 variable "public_subnets" {
   description = "Provider public subnets CIDR values"
-  type        = map(any)
+  type        = list(string)
 }
 
 variable "private_subnets" {
   description = "Provide private subnets CIDR values"
-  type        = map(any)
+  type        = list(string)
 }
